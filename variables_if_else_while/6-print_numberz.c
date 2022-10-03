@@ -12,6 +12,5 @@ int main(void)
 
 	for (; num < 58; num++)
 		putchar(num);
-	printf("\n");
 	return (0);
 }
