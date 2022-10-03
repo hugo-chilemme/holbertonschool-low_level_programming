@@ -12,5 +12,6 @@ int main(void)
 
 	for (; num < 58; num++)
 		putchar(num);
+	putchar('\n');
 	return (0);
 }
