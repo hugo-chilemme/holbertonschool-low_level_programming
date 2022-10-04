@@ -9,11 +9,10 @@
  */
 int main(void)
 {
-	char arr[] = "_putchar";
+	char arr[] = "_putchar\n";
 	long unsigned int i = 0;
 
 	for (; i < sizeof(arr) - 1; i++)
-		putchar(arr[i]);
-	putchar("\n");
+		_putchar(arr[i]);
 	return (0);
 }
