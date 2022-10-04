@@ -14,5 +14,6 @@ int main(void)
 
 	for (; i < sizeof(arr) - 1; i++)
 		putchar(arr[i]);
+	putchar("\n");
 	return (0);
 }
