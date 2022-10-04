@@ -10,11 +10,11 @@ int main(void)
 {
 	int num = 48;
 
-	for (; num <= 102; num+=1)
+	for (; num <= 102; num++)
 	{
 		putchar(num);
 		if (num == 57)
-			num = 97; 
+			num = 97;
 	}
 	putchar('\n');
 	return (0);
