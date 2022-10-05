@@ -20,7 +20,7 @@ void times_table(void)
 		{
 			int result = c * multiplier;
 
-			if (result > 0 && result < 10)
+			if (c > 0 && result < 10)
 			{
 				printf(" ");
 			}
