@@ -15,23 +15,20 @@ void jack_bauer(void)
 	for (; h < 24; h++)
 	{
 		int m = 0;
-		if (h < 10)
-		{
-			printf("0");
-		}
-		
 
 		for (; m < 60; m++)
 		{
+			if (h < 10)
+                	{
+                        	printf("0");
+                	}
+			printf("%i:", h);
+
 			if (m < 10)
 			{
-				printf("%i:0%i\n", h, m);
+				printf("0");
 			}
-			else
-			{
-				printf("%i:%i\n", h, m);
-			}
-			
+			printf("%i\n",m);			
 		}
 	}
 }
