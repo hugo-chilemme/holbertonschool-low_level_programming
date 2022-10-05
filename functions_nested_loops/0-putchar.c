@@ -12,7 +12,7 @@ int main(void)
 	int asciiCode[] = {95, 112, 117, 116, 99, 104, 97, 114};
 	int i = 0;
 	
-	for(; i < 7; ++i) {
+	for(; i < 8; ++i) {
 		_putchar(asciiCode[i]);
 	}
 	return (0);
