@@ -15,9 +15,11 @@ void times_table(void)
 	for (; multiplier < 10; multiplier++)
 	{
 		int c = 0;
+
 		for (; c < 10; c++)
 		{
 			int result = c * multiplier;
+
 			if (result < 10)
 			{
 				printf(" ");
