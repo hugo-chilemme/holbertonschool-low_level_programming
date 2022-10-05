@@ -9,10 +9,11 @@
  */
 int main(void)
 {
-	char arr[] = "_putchar\n";
-	long unsigned int i = 0;
-
-	for (; i < sizeof(arr) - 1; i++)
-		_putchar(arr[i]);
+	int asciiCode[] = [95, 112, 117, 116, 99, 104, 97, 114]; // _putchar
+	int i = 0;
+	
+	for(; i < strlen(asciiCode); ++i) {
+		_putchar(asciiCode[i]);
+	}
 	return (0);
 }
