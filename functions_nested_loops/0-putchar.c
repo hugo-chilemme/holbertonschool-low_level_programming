@@ -16,6 +16,6 @@ int main(void)
 	{
 		_putchar(asciiCode[i]);
 	}
-	_putchar("\n")
+	_putchar('\n')
 	return (0);
 }
