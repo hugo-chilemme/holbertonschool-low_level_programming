@@ -5,7 +5,7 @@
 
 /**
  * _isupper - Entry point
- * @c = Number
+ * @c : Number
  * Return: Always 0.
  */
 int _isupper(int c)
