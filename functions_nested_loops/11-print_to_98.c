@@ -13,11 +13,10 @@ void print_to_98(int n)
 {
 	int c = n;
 	int t = 98;
-	int fc = 1;
 
-	while (c != t || fc == 1)
+	while (c != t)
 	{
-		fc = 0;
+		printf("%i", c);
 		if (c > 98)
 		{
 			c--;
@@ -27,11 +26,14 @@ void print_to_98(int n)
 			c++;
 		}
 
-		printf("%i", c);
 		if (c != 98)
 		{
 			printf(", ");
 		}		
 	}
-	printf("\n");
+	if (n != t)
+	{
+		printf(", ");
+	}
+	printf("98\n");
 }
