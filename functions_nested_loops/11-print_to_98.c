@@ -11,15 +11,27 @@
  */
 void print_to_98(int n)
 {
-	int i = n;
+	int c = n;
+	int t = 98;
+	int fc = 1;
 
-	for (; i <= 98; i++)
+	while (c != t || fc == 1)
 	{
-		printf("%i", i);
+		fc = 0;
+		if (c > 98)
+		{
+			c--;
+		}
+		else if (c < 98)
+		{
+			c++;
+		}
 
-		if (i < 98)
+		printf("%i", c);
+		if (c != 98)
 		{
 			printf(", ");
-		}
+		}		
 	}
+	printf("\n");
 }
