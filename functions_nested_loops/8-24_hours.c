@@ -15,6 +15,11 @@ void jack_bauer(void)
 	for (; h < 24; h++)
 	{
 		int m = 0;
+		if (h < 10)
+		{
+			printf("0");
+		}
+		
 
 		for (; m < 60; m++)
 		{
