@@ -19,16 +19,16 @@ void jack_bauer(void)
 		for (; m < 60; m++)
 		{
 			if (h < 10)
-                	{
-                        	printf("0");
-                	}
+			{
+				printf("0");
+			}
 			printf("%i:", h);
 
 			if (m < 10)
 			{
 				printf("0");
 			}
-			printf("%i\n",m);			
+			printf("%i\n", m);
 		}
 	}
 }
