@@ -19,6 +19,7 @@ void times_table(void)
 		for (; c < 10; c++)
 		{
 			int result = c * multiplier;
+
 			if (c > 0)
 			{
 				if (result < 10)
