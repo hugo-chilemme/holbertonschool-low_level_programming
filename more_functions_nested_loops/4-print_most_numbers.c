@@ -4,7 +4,7 @@
 #include "main.h"
 
 /**
- * print_numbers - Entry point
+ * print_most_numbers - Entry point
  * Return: Always 0.
  */
 void print_most_numbers(void)
