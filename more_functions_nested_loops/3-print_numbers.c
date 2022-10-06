@@ -5,8 +5,6 @@
 
 /**
  * print_numbers - Entry point
- * @a : First Input int
- * @b : Second input int
  * Return: Always 0.
  */
 void print_numbers(void)
