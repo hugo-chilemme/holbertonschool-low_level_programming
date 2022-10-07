@@ -13,10 +13,10 @@ int print_last_digit(int c)
 {
 	if (c < 0)
 	{
-		printf("--%i--", (c * -1) % 10);
+		_putchar('0' + (c * -1) % 10);
 		return ((c * -1) % 10);
 	}
-	printf("__%i__", c%10);
+	_putchar('0' + c % 10);
 	return (c % 10);
 }
 
