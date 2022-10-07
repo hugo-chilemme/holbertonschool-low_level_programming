@@ -14,24 +14,17 @@ void more_numbers(void)
 
 	for (; i < 10; i++) 
 	{
-		int c = 48;
+		int c = 0;
 
-		for (; c <= 57; c++)
+		for (; c <= 14; c++)
 		{
-
-			_putchar(c);
-
-			if (c == 57)
+			int result = c;
+			if (c >= 10)
 			{
-				int r = 48;
-
-				for (; r <= 52; r++)
-				{
-					_putchar(49);
-					_putchar(r);
-				}
+				_putchar(49);
+				result -= 10;
 			}
-			
+			_putchar(48 + result);
 		}
 		_putchar('\n');
 	}
