@@ -5,7 +5,7 @@
 
 /**
  * puts2 - Entry point
- * @s : char of string
+ * @str : char of string
  * Return: Always 1 (True) or 0 (False)
  */
 void puts2(char *str)
@@ -13,7 +13,9 @@ void puts2(char *str)
 	int len = 0;
 	int i = 0;
 
-	for (; str[len]; len++);
+	for (; str[len]; len++)
+
+
 	for (; i < len; i++)
 	{
 		if ((i % 2) == 0)
@@ -21,5 +23,5 @@ void puts2(char *str)
 			_putchar(str[i]);
 		}
 	}
-	_putchar('\n');	
+	_putchar('\n');
 }
