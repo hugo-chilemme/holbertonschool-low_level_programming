@@ -24,9 +24,9 @@ char *_strcat(char *dest, char *src)
 		calc_src++;
 
 	output_size = calc_dest + calc_src;
-	
 
-	for(; index < output_size; index++)
+
+	for (; index < output_size; index++)
 	{
 		if (index >= calc_dest)
 			dest[index] = src[index - calc_dest];
