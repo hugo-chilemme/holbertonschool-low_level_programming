@@ -3,6 +3,19 @@
 #include <stdio.h>
 #include "main.h"
 
+
+
+int isCapitalizeLetter(char n)
+{
+        char detectCapitalize[] = {'\n', ' ', ',', 9, ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+
+        for (int i = 0; i < sizeof(detectCapitalize) / sizeof(detectCapitalize[0]) ; i++) {
+                if (detectCapitalize[i] == n)
+                        return (1);
+        }
+        return (0);
+
+}
 /**
  * cap_string - Entry point
  * @n: dest input
@@ -20,13 +33,12 @@ char *cap_string(char *n)
 		{
 			if (n[i] >= 97 && n[i] <= 122)
 			{
-				capitalize = 0; 
+				capitalize = 0;
 				n[i] = n[i] - 32;
 			}
 			capitalize = 0;
 		}
-
-		if (n[i] == '\n' || n[i] == ' ' || n[i] == ',' || n[i] == '	' || n[i] == ';' || n[i] == '.' || n[i] == '!' || n[i] == '?' || n[i] == '"' || n[i] == '(' || n[i] == ')' || n[i] == '{' || n[i] == '}')
+		if ( isCapitalizeLetter(n[i]) )
 			capitalize = 1;
 		i++;
 	}
@@ -34,3 +46,4 @@ char *cap_string(char *n)
 
 
 }
+
