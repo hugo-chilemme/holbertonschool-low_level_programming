@@ -5,8 +5,8 @@
 
 /**
  * _strcpy - point
- * @a : array
- * @n : sizeof array
+ * @dest : Terminal Pointer
+ * @src : Data to @dest
  * Return: Always 1 (True) or 0 (False)
  */
 char *_strcpy(char *dest, char *src)
