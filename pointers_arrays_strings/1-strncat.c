@@ -7,6 +7,7 @@
  * *_strncat - Entry point
  * @dest: dest input
  * @src : Src input
+ * @n : stop at 
  *
  * Return: Always 1 (True) or 0 (False)
  */
