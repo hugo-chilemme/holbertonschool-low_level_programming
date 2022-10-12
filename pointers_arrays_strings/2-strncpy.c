@@ -14,19 +14,26 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	int calc_src = 0;
+	int calc_dest = 0;
 	int index = 0;
 	int stop_at = n;
 
 	while (src[calc_src] != '\0')
 		calc_src++;
+	
+	while (dest[calc_dest] != '\0')
+		calc_dest++;
 
 
-	for (; index <= calc_src; index++)
+	if (stop_at <= calc_dest)
 	{
-		if (stop_at > 0)
+		for (; index <= calc_src; index++)
 		{
-			dest[index] = src[index];
-			stop_at--;
+			if (stop_at > 0)
+			{
+				dest[index] = src[index];
+				stop_at--;
+			}
 		}
 	}
 
