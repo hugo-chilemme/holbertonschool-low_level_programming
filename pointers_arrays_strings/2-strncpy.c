@@ -25,7 +25,7 @@ char *_strncpy(char *dest, char *src, int n)
 		calc_dest++;
 
 
-	if (stop_at <= calc_dest)
+	if (stop_at <= calc_dest && calc_dest >= stop_at)
 	{
 		for (; index <= calc_src; index++)
 		{
