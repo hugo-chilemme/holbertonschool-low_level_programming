@@ -13,29 +13,14 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int calc_dest = 0;
-	int calc_src = 0;
-	int output_size = 0;
-	int index = 0;
-	int stop_at = n;
+	int l = 0;
 
-	while (dest[calc_dest] != '\0')
-		calc_dest++;
-
-	while (src[calc_src] != '\0')
-		calc_src++;
-
-	output_size = calc_dest + calc_src;
-
-
-	for (; index < output_size; index++)
+	while (l < n)
 	{
-		if (index >= calc_dest && stop_at > 0)
-		{
-			dest[index] = src[index - calc_dest];
-			stop_at--;
-		}
+		if (src[l] != '\0')
+			dest[l] = src[l];
+		else
+			dest[l] = '\0';
+		l++;
 	}
-
-	return (dest);
 }
