@@ -17,7 +17,7 @@ void reverse_array(int *a, int n)
 
 	for (; index < n / 2; index++)
 	{
-		char cache = a[index];
+		int cache = a[index];
 		a[index] = a[e - index];
 		a[e - index] = cache;
 	}
