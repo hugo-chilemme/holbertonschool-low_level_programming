@@ -4,7 +4,7 @@
 #include "main.h"
 
 /**
- * reverse_array - Entry point
+ * string_toupper - Entry point
  * @n: dest input
  *
  * Return: Always 1 (True) or 0 (False)
@@ -16,7 +16,7 @@ char *string_toupper(char *n)
 	while (n[index] != '\0')
 	{
 		if (n[index] >= 97 && n[index] <= 122)
-			n[index] = n[index] - 32; 
+			n[index] = n[index] - 32;
 		index++;
 	}
 	return (n);
