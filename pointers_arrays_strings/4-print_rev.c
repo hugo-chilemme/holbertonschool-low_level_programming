@@ -23,6 +23,5 @@ void print_rev(char *s)
 	{
 		_putchar(s[len - t]);
 	}
-	
 	printf("\n");
 }

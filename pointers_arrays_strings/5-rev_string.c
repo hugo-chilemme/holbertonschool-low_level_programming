@@ -12,15 +12,17 @@ void rev_string(char *s)
 {
 	int i = 0;
 	int t = 0;
-	
-	for (; s[i] != 0; i++);
-	i--;	
-	for (; t <= i/2; t++)
+	int len = 0;
+
+	for (; s[i] != 0; i++)
+		len++;
+
+	len--;
+	for (; t <= len / 2; t++)
 	{
 		char swipe = s[t];
-		s[t] = s[i - t];
-		s[i - t] = swipe;
 
+		s[t] = s[len - t];
+		s[len - t] = swipe;
 	}
-	
 }
