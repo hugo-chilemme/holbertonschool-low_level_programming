@@ -12,7 +12,9 @@
 char *cap_string(char *n)
 {
 	int i = 0;
+	int l = 0;
 	int capitalize = 1;
+	char containsCapitalize[] = {'\n', ' ', ',', '	', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 
 	while (n[i] != '\0')
 	{
@@ -20,14 +22,16 @@ char *cap_string(char *n)
 		{
 			if (n[i] >= 97 && n[i] <= 122)
 			{
-				capitalize = 0; 
+				capitalize = 0;
 				n[i] = n[i] - 32;
 			}
 			capitalize = 0;
 		}
+		l = 0;
+		for (; l < 12; l++)
+			if (containsCapitalize[l] == n[i])
+				capitalize = 1;
 
-		if (n[i] == '\n' || n[i] == ' ' || n[i] == ',' || n[i] == '	' || n[i] == ';' || n[i] == '.' || n[i] == '!' || n[i] == '?' || n[i] == '"' || n[i] == '(' || n[i] == ')' || n[i] == '{' || n[i] == '}')
-			capitalize = 1;
 		i++;
 	}
 	return (n);
