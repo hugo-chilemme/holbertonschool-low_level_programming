@@ -11,10 +11,5 @@
  */
 void reset_to_98(int *p)
 {
-<<<<<<< HEAD
 	p = 98;
 }
-=======
-	*p = 98;
-u}
->>>>>>> 0e2700b2cec928f43faf112f069a83dc1cc0415c
