@@ -14,7 +14,7 @@ char *cap_string(char *n)
 	int i = 0;
 	int l = 0;
 	int capitalize = 1;
-	char containsCapitalize[] = {'\n', ' ', ',', '	', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
+	char c[] = {'\n', ' ', ',', '	', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 
 	while (n[i] != '\0')
 	{
@@ -29,7 +29,7 @@ char *cap_string(char *n)
 		}
 		l = 0;
 		for (; l < 12; l++)
-			if (containsCapitalize[l] == n[i])
+			if (c[l] == n[i])
 				capitalize = 1;
 
 		i++;
