@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stddef.h>
+
 /**
  * _strchr - print depending of a character search
  * @s: pointer who will be scan
