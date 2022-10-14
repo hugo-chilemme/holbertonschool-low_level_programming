@@ -9,7 +9,13 @@
  * @src : Data to @dest
  * Return: Always 1 (True) or 0 (False)
  */
-char *_memset(char *dest)
+char *_memset(char *s, char b, unsigned int n)
 {
-	²
+	int index = 0;
+
+	for (; (unsigned int) index < n; index++)
+	{
+		s[index] = b;
+	}
+	return (s);
 }
