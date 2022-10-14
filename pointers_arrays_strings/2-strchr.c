@@ -23,6 +23,5 @@ char *_strchr(char *s, char c)
 		}
 
 	}
-	s = NULL
 	return ((char) NULL);
 }
