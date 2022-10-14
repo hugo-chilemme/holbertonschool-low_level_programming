@@ -1,10 +1,11 @@
 #include "main.h"
+#include <stddef.h>
 /**
- * _strchr - Function
- * @s: dest
- * @c: c
+ * _strchr - print depending of a character search
+ * @s: pointer who will be scan
+ * @c: this is the character who will search
  *
- * Return: Always(1)
+ * Return: s or null
  */
 char *_strchr(char *s, char c)
 {
@@ -16,7 +17,9 @@ char *_strchr(char *s, char c)
 	{
 		i++;
 		if (s[i] == c)
+		{
 			return (s + i);
+		}
 
 	}
 	return (NULL);
