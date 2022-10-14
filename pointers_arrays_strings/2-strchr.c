@@ -1,20 +1,23 @@
 #include "main.h"
 /**
- * _strchr - print depending of a character search
- * @s: pointer who will be scan
- * @c: this is the character who will search
+ * _strchr - Function
+ * @s: dest
+ * @c: c
  *
- * Return: s or null
+ * Return: Always(1)
  */
 char *_strchr(char *s, char c)
 {
-	int i = 0;
+	int i;
 
-	for (; s[i] != '\0'; i++)
+	i = 0;
+
+	while (s[i] != '\0')
 	{
+		i++;
 		if (s[i] == c)
 			return (s + i);
 
 	}
-	return (s);
+	return (NULL);
 }
