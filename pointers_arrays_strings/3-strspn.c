@@ -1,16 +1,29 @@
 #include "main.h"
 /**
- * _strcmp - compare number of character
- * @s1: dest
- * @s2: src
+ * _strspn - scan the 1 first occurence of any character who is part of 2 and
+ * return the position of the character from 1.
+ * @s: is the one who will be scanned
+ * @accept: search between this list of character
  *
- * Return: s1 - s2
+ * Return: s or null
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	int i = 0;
+	unsigned int i, j;
 
-	while (accept[i] != '\0' && s[i] != '\0' && s[i] == accept[i])
-		i++;
-	return (s[i] - accept[i]);
+	for (i = 0; s[i]; i++)
+	{
+		for (j = 0; accept[j]; j++)
+		{
+			if (s[i] == accept[j])
+			{
+				break;
+			}
+		}
+		if (s[i] != accept[j])
+		{
+			break;
+		}
+	}
+	return (i);
 }
