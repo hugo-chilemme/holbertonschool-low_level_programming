@@ -4,9 +4,10 @@
 #include "main.h"
 
 /**
- * _strcpy - point
- * @dest : Terminal Pointer
- * @src : Data to @dest
+ * _memset - point
+ * @s : buffer
+ * @b : data to buffer
+ * @n : number to change @b
  * Return: Always 1 (True) or 0 (False)
  */
 char *_memset(char *s, char b, unsigned int n)
