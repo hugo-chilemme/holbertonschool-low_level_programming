@@ -11,7 +11,7 @@ int _strcmp(char *dest, char *src)
 {
 	int i = 0;
 
-	while (s2[i] && s1[i] && s1[i] == s2[i])
+	while (src[i] && dest[i] && dest[i] == src[i])
 		i++;
-	return (s1[i] - s2[i]);
+	return (dest[i] - src[i]);
 }
