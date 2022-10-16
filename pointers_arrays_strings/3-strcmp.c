@@ -4,11 +4,10 @@
  * *_strcmp - Entry point
  * @dest: dest input
  * @src: Src input
- * @n: stop at
  *
  * Return: Always 1 (True) or 0 (False)
  */
-int _strcmp(char *s1, char *s2)
+int _strcmp(char *dest, char *src)
 {
 	int i = 0;
 
