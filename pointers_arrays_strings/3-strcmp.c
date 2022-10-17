@@ -1,21 +1,17 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
- * _strlen - Entry point
- * @s : char of string
+ * *_strcmp - Entry point
+ * @dest: dest input
+ * @src: Src input
+ *
  * Return: Always 1 (True) or 0 (False)
  */
-int _strlen(char *s)
+int _strcmp(char *dest, char *src)
 {
 	int i = 0;
-	int lenght = 0;
 
-	for (; s[i] != 0; i++)
-	{
-		lenght++;
-	}
-	return (lenght);
+	while (src[i] && dest[i] && dest[i] == src[i])
+		i++;
+	return (dest[i] - src[i]);
 }
