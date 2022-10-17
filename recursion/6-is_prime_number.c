@@ -2,6 +2,31 @@
 #include "main.h"
 
 /**
+ * check_prime_number - Entry point
+ * @isReadyFind: check if prime is ready find
+ * @n: start value
+ * @t: check value
+ *
+ * Return: Always 1 (True) or 0 (False)
+ */
+int check_prime_number(int isReadyFind, int n, int t)
+{
+	t++;
+
+	if (n == t && !isReadyFind)
+		return (1);
+
+	if (n % t == 0)
+	{
+		if (isReadyFind)
+			return (0);
+
+		isReadyFind = 1;
+	}
+	return (check_prime_number(isReadyFind, n, t));
+}
+
+/**
  * is_prime_number - Entry point
  * @c: number
  *
@@ -9,20 +34,7 @@
  */
 int is_prime_number(int c)
 {
-	int isReadyFind;
-	int i = c - 1;
-	
-	if (c < 2)
+	if (c <= 1)
 		return (0);
-	
-	for (; i > 1; i--) 
-	{
-		if ( c % i == 0)
-		{
-			if (isReadyFind)
-				return (0);
-			isReadyFind = 1;
-		}
-	}
-	return (1);
+	return (check_prime_number(0, c, 1));
 }
