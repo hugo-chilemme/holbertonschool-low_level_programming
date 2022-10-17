@@ -3,7 +3,8 @@
 
 /**
  * _pow_recursion - Entry point
- * @n: input
+ * @x: just x
+ * @y: just y
  *
  * Return: Always 1 (True) or 0 (False)
  */
