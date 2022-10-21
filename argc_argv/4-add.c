@@ -15,15 +15,18 @@ int main(int argc, char *argv[])
 
 	for (; index < argc; index++)
 	{
-		int num = atoi(argv[index]);
+		int c = 0;
 
-		if (num == 0)
+		for (; argv[index][c] != '\0'; c++)
 		{
-			printf("Error");
-			return (0);
+			if (!isdigit(argv[index][c]))
+			{
+				printf("Error\n");
+				return (0);
+			}
 		}
-		result += num;				
-	}	
+		result += atoi(argv[index]);
+	}
 	printf("%i\n", result);
 	return (0);
 }
