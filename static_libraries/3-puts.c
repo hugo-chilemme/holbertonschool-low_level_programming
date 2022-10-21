@@ -1,11 +1,30 @@
+#include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
+#include "main.h"
 
 /**
- * main - description pour main
- * Return: Always 0 (Success)
+ * _puts - Entry point
+ * @s : char of string
+ * Return: Always 1 (True) or 0 (False)
  */
-int main(void)
+void _puts(char *s)
 {
-puts("\"Programming is like building a multilingual puzzle");
-return (0);
+	int i = 0;
+
+	for (; s[i] != 0; i++)
+	{
+		_putchar(s[i]);
+	}
+	_putchar('\n');
 }
+
+
+
+
+
+
+
+
+
+
