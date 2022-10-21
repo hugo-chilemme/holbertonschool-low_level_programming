@@ -5,7 +5,7 @@
  * @s: is the one who will be scanned
  * Return: s or null
  */
-char *_strstr(char *str)
+char *_strstr(char *s, char *accept)
 {
 	unsigned int i, j;
 

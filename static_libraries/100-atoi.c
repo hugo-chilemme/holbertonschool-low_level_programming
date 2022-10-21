@@ -9,7 +9,8 @@
  *
  * Return: Always 1 (True) or 0 (False)
  */
-char *_atoi(char *s)
+int *_atoi(char *s)
 {
-	return (s);
+			printf("%s\n", s);
+			return (0);
 }
