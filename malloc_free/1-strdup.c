@@ -12,13 +12,16 @@ char *_strdup(char *str)
 	char *ret;
 	int len = 0;
 
-	while (str[len])
+	while (str[len] != '\0') 
 		len++;
 
-	if (len == 0)
+	if ( str == NULL)
 		return ('\0');
 
 	ret = malloc(sizeof(char) * len);
+
+	if (ret == 0)
+		return ('\0');
 
 	for (; len >= 0; len--)
 		ret[len] = str[len];
