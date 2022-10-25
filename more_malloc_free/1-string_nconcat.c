@@ -10,29 +10,30 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int len_s1 = 0;
-	unsigned int len_displayed_s2 = 0;
-	char *mal;
-	int totalSize = 0;
-	int index = 0;
+    
+        int len_s1 = 0;
+        unsigned int len_displayed_s2 = 0;
+        char *mal;
+        int totalSize = 0;
+        int index = 0;
 
-	while (s1[len_s1] != '\0')
-		len_s1++;
+        while (s1[len_s1] != '\0')
+                len_s1++;
 
-	while (s2[len_displayed_s2] != '\0' && len_displayed_s2 < n)
-		len_displayed_s2++;
+        while (s2[len_displayed_s2] != '\0' && len_displayed_s2 < n - 1)
+                len_displayed_s2++;
 
-	totalSize = len_s1 + len_displayed_s2;
+        totalSize = len_s1 + len_displayed_s2;
 
-	mal = malloc(totalSize + 1);
+        mal = malloc(totalSize + 1);
+       
+        for (; index <= totalSize; index++)
+        {
+                if (index < len_s1)
+                        mal[index] = s1[index];
+                else
+                        mal[index] = s2[index - len_s1];
+        }
 
-	for (; index < totalSize; index++)
-	{
-		if (index < len_s1)
-			mal[index] = s1[index];
-		else
-			mal[index] = s2[index - len_displayed_s2 + 1];
-	}
-
-	return (mal);
+        return (mal);
 }
