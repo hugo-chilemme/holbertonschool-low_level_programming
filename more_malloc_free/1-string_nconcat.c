@@ -16,6 +16,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
         char *mal;
         int totalSize = 0;
         int index = 0;
+	
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
 
         while (s1[len_s1] != '\0')
                 len_s1++;
@@ -25,8 +28,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
         totalSize = len_s1 + len_displayed_s2;
 
-        mal = malloc(totalSize + 1);
-       
+        mal = malloc(totalSize+1);
+      
+       	if (mal == 0)
+		return (NULL);
+
         for (; index <= totalSize; index++)
         {
                 if (index < len_s1)
