@@ -17,5 +17,10 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 	table = malloc(sizeof(int) * (height * width));
+
+	for (; h < height; h++)
+	{
+		table[h] = malloc(sizeof(int) * width);
+	}
 	return (table);
 }
