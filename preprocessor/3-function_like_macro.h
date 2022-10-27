@@ -1,6 +1,3 @@
-int ABS(int n)
-{
-	if (n < 0)
-		return (n * -1);
-	return (n);
-}
+#ifndef ABS
+#define ABS(a)((a < 0) ? (a * -1) : (a))
+#endif
