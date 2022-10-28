@@ -1,4 +1,4 @@
-[Back to home](https://github.com/HugoCLI/holbertonschool-low_level_programming/blob/main/README.md)
+[Back to home](/README.md) - [Previous Project](/hello_world/README.md) - [Next Project](/malloc_free/README.md)
 
 # C - Makefiles
 ###### Training by Holberton School ([www.holbertonschool.com](www.holbertonschool.com))
