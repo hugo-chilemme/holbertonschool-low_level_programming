@@ -18,7 +18,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (cal == 0)
 	{
-		free(cal); 
+		free(cal);
 		return (NULL);
 	}
 	return (cal);
