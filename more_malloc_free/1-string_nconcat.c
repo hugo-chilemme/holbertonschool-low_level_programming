@@ -28,7 +28,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
         while (s2[len_displayed_s2] != '\0')
                 len_displayed_s2++;
-
+	
+	if (n < len_displayed_s2)
+		len_displayed_s2 = n;
         totalSize = len_s1 + len_displayed_s2;
 
         mal = malloc(totalSize + 1);
@@ -44,7 +46,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
                         mal[index] = s1[index];
                 else if (index - len_s1 < n)
                         mal[index] = s2[index - len_s1];
-        }
+        	printf("%i %c\n", index, mal[index]);
+	}
+	mal[index] = '\0';
 
         return (mal);
 }
