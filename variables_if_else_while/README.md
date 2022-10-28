@@ -3,8 +3,8 @@
 # C - Variables, if, else, while
 ###### Training by Holberton School ([www.holbertonschool.com](www.holbertonschool.com))
 &nbsp;
-- [0. This program will assign a random number to the variable n each time it is executed. Complete the source code in order to print whether the number stored in the variable n is positive or negative.](0-positive_or_negative.c)
-- [1. This program will assign a random number to the variable n each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable n.](1-last_digit.c)
+- [0. Create a program to determine if a number is positive or negative.](0-positive_or_negative.c)
+- [1. Create a program to display the last digit of a number and if it is less than 5, greater than 5 or equal to 0.](1-last_digit.c)
 - [2. Write a program that prints the alphabet in lowercase, followed by a new line.](2-print_alphabet.c)
 - [3. Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.](3-print_alphabets.c)
 - [4. Write a program that prints the alphabet in lowercase, followed by a new line.](4-print_alphabt.c)
