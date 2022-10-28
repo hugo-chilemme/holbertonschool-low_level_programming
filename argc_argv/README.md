@@ -1,4 +1,4 @@
-[Back to home](https://github.com/HugoCLI/holbertonschool-low_level_programming)
+[Back to home](https://github.com/HugoCLI/holbertonschool-low_level_programming/blob/main/README.md)
 
 # C - argc, argv
 ###### Training by Holberton School ([www.holbertonschool.com](www.holbertonschool.com))
