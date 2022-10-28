@@ -1,4 +1,4 @@
-[Back to home](https://github.com/HugoCLI/holbertonschool-low_level_programming/blob/main/README.md)
+[Back to home](/README.md) - [Next Project](/argc_argv/README.md) - [Next Project](/hello_world/README.md)
 
 # C - More functions, more nested loops
 ###### Training by Holberton School ([www.holbertonschool.com](www.holbertonschool.com))
