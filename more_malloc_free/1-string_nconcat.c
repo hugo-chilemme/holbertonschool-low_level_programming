@@ -28,11 +28,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
         totalSize = len_s1 + len_displayed_s2;
 
-        mal = malloc(totalSize+1);
+        mal = malloc(totalSize + 1);
       
        	if (mal == 0)
+	{
+		free(mal);
 		return (NULL);
-
+	}
         for (; index <= totalSize; index++)
         {
                 if (index < len_s1)
