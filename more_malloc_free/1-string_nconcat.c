@@ -28,7 +28,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
         totalSize = len_s1 + len_displayed_s2;
 
-        mal = malloc(totalSize + 1);
+        mal = malloc(totalSize);
       
        	if (mal == 0)
 	{
