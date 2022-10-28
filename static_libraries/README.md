@@ -1,4 +1,4 @@
-[Back to home](https://github.com/HugoCLI/holbertonschool-low_level_programming/blob/main/README.md)
+[Back to home](/README.md) - [Previous Project](/recursion/README.md) - [Next Project](/variables_if_else_while/README.md)
 
 # C - Static libraries
 ###### Training by Holberton School ([www.holbertonschool.com](www.holbertonschool.com))
