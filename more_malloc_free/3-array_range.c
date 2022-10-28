@@ -26,7 +26,6 @@ int *array_range(int min, int max)
 	for (; seek <= max; seek++)
 	{
 		mal[index] = seek;
-		printf("%i %i\n", index, seek);
 		index++;
 	}
 	return (mal);
