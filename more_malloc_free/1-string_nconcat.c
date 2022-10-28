@@ -40,9 +40,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		free(mal);
 		return (NULL);
 	}
-        for (; index <= totalSize; index++)
+        for (; index < totalSize; index++)
         {
-                if (index < len_s1)
+		if (index < len_s1)
                         mal[index] = s1[index];
                 else if (index - len_s1 < n)
                         mal[index] = s2[index - len_s1];
