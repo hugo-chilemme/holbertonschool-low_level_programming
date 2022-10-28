@@ -6,7 +6,7 @@
 - [C - Hello, World](hello_world/README.md)
 - [C - Makefiles](makefiles/README.md)
 - [C - malloc, free](malloc_free/README.md)
-- [C - More malloc, free](more_functions_nested_loops/README.md)
+- [C - More malloc, free](more_malloc_free/README.md)
 - [C - Pointers, arrays and strings](pointers_arrays_strings/README.md)
 - [C - Preprocessor](preprocessor/README.md)
 - [C - Recursion](recursion/README.md)
