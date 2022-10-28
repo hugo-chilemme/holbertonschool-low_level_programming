@@ -26,7 +26,7 @@
   &nbsp;
 - [3. Write a function that prints the numbers, from 0 to 9, followed by a new line.](3-print_numbers.c)
   &nbsp;
-  
+   
   ```c
     void print_numbers(void);
   ```
