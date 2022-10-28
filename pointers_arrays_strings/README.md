@@ -1,4 +1,4 @@
-[Back to home](https://github.com/HugoCLI/holbertonschool-low_level_programming/blob/main/README.md)
+[Back to home](/README.md) - [Previous Project](/more_malloc_free/README.md) - [Next Project](/preprocessor/README.md)
 
 # C - Pointers, arrays and strings
 ###### Training by Holberton School ([www.holbertonschool.com](www.holbertonschool.com))
