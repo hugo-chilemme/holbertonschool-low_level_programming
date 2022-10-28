@@ -16,7 +16,7 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 
-	mal = calloc(max - min, sizeof(int));
+	mal = calloc((max - min) + 1, sizeof(int));
 
 	if (mal == 0)
 	{
