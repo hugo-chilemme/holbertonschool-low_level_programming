@@ -16,14 +16,17 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 
-	mal = malloc(sizeof(int) * max + 1);
+	mal = calloc(max - min, sizeof(int));
 
 	if (mal == 0)
+	{
+		free(mal);
 		return (NULL);
-
+	}
 	for (; seek <= max; seek++)
 	{
 		mal[index] = seek;
+		printf("%i %i\n", index, seek);
 		index++;
 	}
 	return (mal);
