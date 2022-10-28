@@ -71,8 +71,8 @@
   &nbsp;
 - [10. Write a function that prints a triangle, followed by a new line.](10-print_triangle.c)
   &nbsp;
-  
+
   ```c
     void print_triangle(int size);
   ```
-  &nbsp;
+  &nbsp; 
