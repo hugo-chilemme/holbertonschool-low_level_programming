@@ -1,4 +1,4 @@
-[Back to home](https://github.com/HugoCLI/holbertonschool-low_level_programming/blob/main/README.md)
+[Back to home](/README.md) - [Previous Project](/functions_nested_loops/README.md) - [Next Project](/makefiles/README.md)
 
 # C - Hello, World
 ###### Training by Holberton School ([www.holbertonschool.com](www.holbertonschool.com))
