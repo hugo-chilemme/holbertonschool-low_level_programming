@@ -12,5 +12,3 @@
 - [C - Recursion](recursion/README.md)
 - [C - Static libraries](static_libraries/README.md)
 - [C - Variables, if, else, while](variables_if_else_while/README.md)
-
-     
