@@ -1,11 +1,8 @@
 #include "dog.h"
 #include <stdio.h>
 /**
- * init_dog - Entry point
+ * print_dog - Entry point
  * @d: dog structure
- * @name: dog name
- * @age: dog age
- * @owner: dog owner
  * Return: Always 0.
  */
 void print_dog(struct dog *d)
