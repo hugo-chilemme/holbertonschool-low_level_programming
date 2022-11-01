@@ -1,4 +1,4 @@
-#ifndef FUNC_POIN 
+#ifndef FUNC_POIN
 #define FUNC_POIN
 #include <stddef.h>
 void print_name(char *name, void (*f)(char *));
@@ -14,8 +14,8 @@ int int_index(int *array, int size, int (*cmp)(int));
  */
 typedef struct op
 {
-    char *op;
-    int (*f)(int a, int b);
+	char *op;
+	int (*f)(int a, int b);
 } op_t;
 
 int (*get_op_func(char *s))(int, int);
