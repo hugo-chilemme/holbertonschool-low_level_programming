@@ -19,11 +19,17 @@ int (*get_op_func(char *s))(int, int)
 
 	int i = 0;
 
-	for (; i < 5; i++)
+	i = ops[0].op == s ? 0 : i;
+	i = ops[1].op == s && i == 0 ? 1 : i;
+	i = ops[2].op == s && i == 0 ? 2 : i;
+	i = ops[3].op == s && i == 0 ? 3 : i;
+	i = ops[4].op == s && i == 0 ? 4 : i;
+	i = ops[5].op == s && i == 0 ? 5 : i;
+
+	if (i == 5)
 	{
-		if (*ops[i].op == *s)
-			return (ops[i].f);
+		printf("Error\n");
+		exit(98);
 	}
-	printf("Error\n");
-	exit(98);
+	return (ops[i].f);
 }
