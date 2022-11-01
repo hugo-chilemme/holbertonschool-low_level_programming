@@ -1,9 +1,9 @@
 #include "function_pointers.h"
 #include <stdio.h>
 /**
- *  - Entry point
- * @a: array of numbers
- * @b
+ * op_add - Addition
+ * @a: number 1
+ * @b: number 2
  * Return: Always 0.
  */
 int op_add(int a, int b)
@@ -11,9 +11,9 @@ int op_add(int a, int b)
 	return (a + b);
 }
 /**
- *  - Entry point
- * @a: array of numbers
- * @b
+ * op_sub - Soustraction
+ * @a: number 1
+ * @b: number 2
  * Return: Always 0.
  */
 int op_sub(int a, int b)
@@ -21,9 +21,9 @@ int op_sub(int a, int b)
 	return (a - b);
 }
 /**
- *  - Entry point
- * @a: array of numbers
- * @b
+ * op_mul - Multiplication
+ * @a: number 1
+ * @b: number 2
  * Return: Always 0.
  */
 int op_mul(int a, int b)
@@ -31,9 +31,9 @@ int op_mul(int a, int b)
 	return (a * b);
 }
 /**
- *  - Entry point
- * @a: array of numbers
- * @b
+ * op_div - Division
+ * @a: number 1
+ * @b: number 2
  * Return: Always 0.
  */
 int op_div(int a, int b)
@@ -41,12 +41,12 @@ int op_div(int a, int b)
 	return (a / b);
 }
 /**
- *  - Entry point
- * @a: array of numbers
- * @b
+ * op_mod - Modulo
+ * @a: number 1
+ * @b: number 2
  * Return: Always 0.
  */
 int op_mod(int a, int b)
 {
-	return (a % b);	
+	return (a % b);
 }

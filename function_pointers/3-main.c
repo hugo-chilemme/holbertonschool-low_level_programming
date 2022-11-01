@@ -12,10 +12,13 @@ int main(int argc, char *argv[])
 {
 	int a = atoi(argv[1]);
 	int b = atoi(argv[3]);
+	int ret = 0;
 
-	printf("%i %s %i\n", a, argv[2], b);
-	
-	int ret = (*get_op_func(argv[2]))(1, 2);
+	if (a == 0 || b == 0 || argc != 4)
+		return (0);
 
+	ret = (*get_op_func(argv[2]))(a, b);
+
+	printf("%i\n", ret);
 	return (0);
 }

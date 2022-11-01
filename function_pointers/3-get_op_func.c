@@ -1,10 +1,9 @@
 #include "function_pointers.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
- * array_iterator - Entry point
- * @array: array of numbers
- * @size: size of @array
- * @action: out function to call array[size_t]
+ * get_op_func - Entry point
+ * @s: operator (maybe)
  * Return: Always 0.
  */
 int (*get_op_func(char *s))(int, int)
@@ -20,11 +19,11 @@ int (*get_op_func(char *s))(int, int)
 
 	int i = 0;
 
-	for (; i < 7; i++)
+	for (; i < 5; i++)
 	{
-		if(ops.['+'])
-			return ops->[s];
-	}	
-	return (op_add);
-		
+		if (*ops[i].op == *s)
+			return (ops[i].f);
+	}
+	printf("Error\n");
+	exit(98);
 }
