@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int b = 0;
 	int ret = 0;
 
-	if (argv[1] == NULL || argv[3] == NULL || atoi(argv[1]) == 0 || atoi(argv[3]) == 0 || argc != 4)
+	if (argv[1] == NULL ||  strlen(argv[2]) != 1 || argv[3] == NULL || atoi(argv[1]) == 0 || atoi(argv[3]) == 0 || argc != 4)
 	{
 		printf("Error\n");
 		exit (98);
