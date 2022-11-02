@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "3-calc.h"
 #include <stdlib.h>
+#include <string.h>
 /**
  * main - check the code
  * @argc: number of argv
