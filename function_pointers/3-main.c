@@ -18,17 +18,16 @@ int main(int argc, char *argv[])
 	if (argv[1] == NULL || argv[3] == NULL || argc != 4)
 	{
 		printf("Error\n");
-		exit (98);
-	} 
+		exit(98);
+	}
 	if (strlen(argv[2]) != 1)
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
-	
 
 	a = atoi(argv[1]);
-        b = atoi(argv[3]);
+	b = atoi(argv[3]);
 
 	ret = (*get_op_func(argv[2]))(a, b);
 
