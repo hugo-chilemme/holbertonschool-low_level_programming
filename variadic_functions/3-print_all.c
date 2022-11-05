@@ -30,9 +30,11 @@ void print_s(va_list p)
 	char *result = va_arg(p, char*);
 
 	if (!result)
+	{
 		printf("(nil)");
-	else
-		printf("%s", result);
+		return;
+	}
+	printf("%s", result);
 }
 
 /**
