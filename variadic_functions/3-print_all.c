@@ -57,7 +57,7 @@ void print_all(const char * const format, ...)
 	va_list ptr;
 	int f = 0;
 	int l = 0;
-	int req_comma = 0;
+	char *req_comma = "";
 
 	form list[] = {
 		{"i", print_i},
@@ -72,16 +72,15 @@ void print_all(const char * const format, ...)
 	{
 		l = 0;
 
-		if (req_comma)
-			printf(", ");
-		req_comma = 0;
+		printf("%s", req_comma);
+		req_comma = "";
 
 		while (list[l].t)
 		{
 			if (*list[l].t == format[f])
 			{
 				list[l].f(ptr);
-				req_comma = 1;
+				req_comma = ", ";
 			}
 			l++;
 		}
