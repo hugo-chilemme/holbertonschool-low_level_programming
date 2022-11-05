@@ -1,15 +1,16 @@
 #include "variadic_functions.h"
 
 /**
- * sum_them_all - check the code
- * @n: number of array
+ * print_numbers - check the code
+ * @separator: separate value by this operator
+ * @n: size of argv
  * Return: Always 0.
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list ptr;
 	unsigned int i = 0;
-	
+
 	va_start(ptr, n);
 
 	for (; i < n; i++)
