@@ -14,14 +14,17 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	if (!head)
 		return (NULL);
 
+	if (index == 0)
+		return (checker);
+
 	while (checker->next)
 	{		
-		if (count == index)
-			return (checker);
 		checker = checker->next;
 		count++;
+		if (count == index)
+			return (checker);
 	}
-	return (checker);
+	return (NULL);
 
 
 }
