@@ -22,13 +22,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	newNode->n = n;
 	newNode->next = NULL;
-	
+
 	if (idx == 0 || !*head)
 	{
 		newNode->next = *head;
 		*head = newNode;
 		return (newNode);
-	}	
+	}
 
 	while (checker)
 	{
@@ -36,16 +36,15 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		{
 			lastNode->next = newNode;
 			newNode->next = checker;
-
 			return (newNode);
 		}
 		lastNode = checker;
 		checker = checker->next;
 		seek++;
-		if(!checker && seek == idx)
+
+		if (!checker && seek == idx)
 		{
 			lastNode->next = newNode;
-			
 			return (newNode);
 		}
 	}
