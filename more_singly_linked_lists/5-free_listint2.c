@@ -8,10 +8,13 @@
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *target = *head;
-
-	if (!target)
+	listint_t *target;
+	
+	if(!head)
 		return;
+
+	target = *head;
+	
 
 	if (target->next)
 		free_listint2(&target->next);
