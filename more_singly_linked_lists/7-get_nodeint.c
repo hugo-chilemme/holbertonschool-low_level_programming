@@ -15,14 +15,13 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		return (NULL);
 
 	while (checker->next)
-	{
+	{		
 		if (count == index)
 			return (checker);
-
 		checker = checker->next;
 		count++;
 	}
-	return (NULL);
+	return (checker);
 
 
 }
