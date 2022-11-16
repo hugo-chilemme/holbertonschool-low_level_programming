@@ -16,10 +16,11 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 
 	while (checker->next)
 	{
-		checker = checker->next;
-		count++;
 		if (count == index)
 			return (checker);
+
+		checker = checker->next;
+		count++;
 	}
 	return (NULL);
 
