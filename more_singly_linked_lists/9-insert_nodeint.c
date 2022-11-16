@@ -42,6 +42,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		lastNode = checker;
 		checker = checker->next;
 		seek++;
+		if(!checker && seek == idx)
+		{
+			lastNode->next = newNode;
+			
+			return (newNode);
+		}
 	}
 	return (NULL);
 }
