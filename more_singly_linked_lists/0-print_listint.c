@@ -8,6 +8,9 @@
  */
 size_t print_listint(const listint_t *h)
 {
+	if (!h)
+		return (0);
+
 	printf("%i\n", h->n);
 
 	if (h->next)
