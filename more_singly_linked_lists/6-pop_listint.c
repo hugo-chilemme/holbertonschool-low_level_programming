@@ -12,7 +12,7 @@ int pop_listint(listint_t **head)
 	listint_t *suite;
 	int cache_num;
 
-	if (!head)
+	if (!*head)
 		return (0);
 
 	suite = NULL;
