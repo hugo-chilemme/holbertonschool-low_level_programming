@@ -1,15 +1,18 @@
 #include "lists.h"
 
 /**
- * add_nodeint_end - Function
+ * free_listint - Function
  * @head: nodelist
- * @n: new value element
- * Return: new node list
+ * Return: 0
+ * Description: Free all node
  */
 void free_listint(listint_t *head)
 {
+	if (!head)
+		return;
+
 	if (head->next)
 		free_listint(head->next);
-	
+
 	free(head);
 }
