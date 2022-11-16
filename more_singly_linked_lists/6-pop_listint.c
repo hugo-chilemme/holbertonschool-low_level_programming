@@ -15,15 +15,14 @@ int pop_listint(listint_t **head)
 	if (!head)
 		return (0);
 
+	suite = NULL;
 	if (target->next)
-	{
 		suite = target->next;
-		cache_num = target->n;
 
-		free(target);
-		*head = suite;
-		return (cache_num);
-	}
-	return (0);
+	cache_num = target->n;
+
+	free(target);
+	*head = suite;
+	return (cache_num);
 
 }
