@@ -1,10 +1,10 @@
 #include "lists.h"
 
 /**
- * free_list - Function
- * @head: node list
- * Description: add element in a  linked list
- * Return: void
+ * print_listint - Function
+ * @h: node list
+ * Description: print element and return number of node
+ * Return: length of node list
  */
 size_t print_listint(const listint_t *h)
 {
