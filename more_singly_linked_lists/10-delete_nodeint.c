@@ -33,21 +33,18 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		target = target->next;
 		seek++;
 	}
-
 	if (index == 0)
 	{
 		free(*head);
 		*head = NULL;
 		return (1);
 	}
-
-	if (index >= seek)
+	if (index <= seek)
 	{
 		free(target->next);
 		free(target);
 		(*head)->next = NULL;
-		return (-1);
+		return (1);
 	}
-
 	return (-1);
 }
