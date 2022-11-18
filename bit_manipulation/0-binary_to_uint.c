@@ -9,10 +9,8 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int Index = 0;
-	int IndexMax = 0;
 	unsigned int Result = 0;
-	int Mul = 1;
-
+	unsigned int Mul = 1;
 	if (!b)
 		return (0);
 
@@ -20,20 +18,14 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[Index] != '0' && b[Index] != '1')
 			return (0);
-
-		IndexMax++;
-		Mul += (Mul * 1);
 	}
-	Index = 0;
 
-	for (; Index < IndexMax; Index++)
+	Index = strlen(b) - 1;
+	for (; Index >= 0; Index--)
 	{
-		Mul /= 2;
-		if (b[Index] == '1')
-		{
-			int Inter = Mul == 0 ? 1 : Mul;
-			Result += Inter;
-		}
+		if (b[Index] == '1') 
+			Result += Mul;
+		Mul += Mul;
 	}
 	return (Result);
 }
