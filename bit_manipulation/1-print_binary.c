@@ -9,8 +9,7 @@
 void print_binary(unsigned long int n)
 {
 	int MaxIndex = 1;
-	unsigned int MaxValue = 1;
-	int RemValue = n;
+	unsigned long int RemValue = n;
 	int startByOne = 0;
 
 	if (n == 0 || !n)
@@ -19,19 +18,13 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	while (MaxValue < n)
-	{
-		MaxValue += MaxValue;
-		MaxIndex++;
-	}
-
-
+	MaxIndex = 20;
 	while (MaxIndex >= 0)
 	{
-		int Res = _pow_recursion(2, MaxIndex);
+		unsigned long int Res = _pow_recursion(2, MaxIndex);
 
 		Res = Res == 0 ? 1 : Res;
-		if (RemValue - Res >= 0)
+		if (RemValue >= Res)
 		{
 			startByOne = 1;
 			_putchar('1');
