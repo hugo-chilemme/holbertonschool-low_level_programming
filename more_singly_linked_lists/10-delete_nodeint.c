@@ -34,14 +34,19 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		seek++;
 	}
 
-	if (index >= seek)
-		return (-1);
-
 	if (index == 0)
 	{
 		free(*head);
 		*head = NULL;
 		return (1);
 	}
+
+	if (index >= seek)
+	{
+		free(target->next);
+		(*head)->next = NULL;
+		return (1);
+	}
+
 	return (-1);
 }
