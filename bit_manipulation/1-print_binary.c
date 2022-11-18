@@ -18,7 +18,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	MaxIndex = 20;
+	MaxIndex = 31;
 	while (MaxIndex >= 0)
 	{
 		unsigned long int Res = _pow_recursion(2, MaxIndex);
