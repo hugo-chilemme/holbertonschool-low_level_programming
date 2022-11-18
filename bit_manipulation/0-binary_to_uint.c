@@ -30,7 +30,10 @@ unsigned int binary_to_uint(const char *b)
 	{
 		Mul /= 2;
 		if (b[Index] == '1')
-			Result += Mul;
+		{
+			int Inter = Mul == 0 ? 1 : Mul;
+			Result += Inter;
+		}
 	}
 	return (Result);
 }
