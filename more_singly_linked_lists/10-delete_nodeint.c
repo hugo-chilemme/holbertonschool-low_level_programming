@@ -44,8 +44,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (index >= seek)
 	{
 		free(target->next);
+		free(target);
 		(*head)->next = NULL;
-		return (1);
+		return (-1);
 	}
 
 	return (-1);
