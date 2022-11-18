@@ -11,6 +11,7 @@ unsigned int binary_to_uint(const char *b)
 	int Index = 0;
 	unsigned int Result = 0;
 	unsigned int Mul = 1;
+
 	if (!b)
 		return (0);
 
@@ -23,7 +24,7 @@ unsigned int binary_to_uint(const char *b)
 	Index = strlen(b) - 1;
 	for (; Index >= 0; Index--)
 	{
-		if (b[Index] == '1') 
+		if (b[Index] == '1')
 			Result += Mul;
 		Mul += Mul;
 	}
