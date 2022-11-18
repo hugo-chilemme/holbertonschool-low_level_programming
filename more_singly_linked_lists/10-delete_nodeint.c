@@ -16,16 +16,22 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (!*head)
 		return (-1);
 
-	while (target->next && seek <= index)
+	while (seek <= index)
 	{
 		if (seek == index)
 		{
-			if (index > 0)
-				lastNode->next = target->next;
+			if (target->next)
+			{
+				if (index > 0)
+					lastNode->next = target->next;
+				else
+					*head = target->next;
+			}
 			else
-				*head = target->next;
+				lastNode->next = NULL;
 			free(target);
 			target = NULL;
+
 			return (1);
 		}
 		lastNode = target;
