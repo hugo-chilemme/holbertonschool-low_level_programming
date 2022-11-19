@@ -5,7 +5,7 @@
 - [C - Variables, if, else, while](variables_if_else_while/)
 - [C - Functions, nested loops](functions_nested_loops/)
 - [C - Makefiles](makefiles/)
-- [C - More functions, more nested loops](functions_nested_loops/)
+- [C - More functions, more nested loops](more_functions_nested_loops/)
 - [C - Pointers, arrays and strings](pointers_arrays_strings/)
 - [C - Recursion](recursion/)
 - [C - Static libraries](static_libraries/)
