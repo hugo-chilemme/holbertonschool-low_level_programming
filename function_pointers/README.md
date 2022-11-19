@@ -3,8 +3,19 @@
 - [0. Write a function that prints a name.](0-print_name.c)
 - [1. Write a function that executes a function given as a parameter on each element of an array.](1-array_iterator.c)
 - [2. Write a function that searches for an integer.](2-int_index.c)
-- 3\. Write a program that performs simple operations.
-  - [3-main.c](3-main.c)
-  - [3-op_functions.c](3-op_functions.c)
-  - [3-get_op_func.c](3-get_op_func.c)
-  - [3-calc.h](3-calc.h)
+- 3\. Write a program that performs simple operations. [3-main.c](3-main.c), [3-op_functions.c](3-op_functions.c), [3-get_op_func.c](3-get_op_func.c), [3-calc.h](3-calc.h)
+```c
+int op_add(int a, int b);
+```
+```c
+int op_sub(int a, int b);
+```
+```c
+int op_mul(int a, int b);
+```
+```c
+int op_div(int a, int b);
+```
+```c
+int op_mod(int a, int b);
+```
