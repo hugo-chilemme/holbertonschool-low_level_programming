@@ -8,6 +8,3 @@
 - [2. Create your first useful Makefile.](2-Makefile)
 - [3. Create a script to create a makefile.](3-Makefile)
 - [4. Create a script to create a makefile and be able to delete or compile files.](4-Makefile)
- 
-l
- 
