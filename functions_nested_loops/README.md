@@ -1,8 +1,3 @@
-[Back to home](/README.md) - [Previous Project](/argc_argv/README.md) - [Next Project](/hello_world/README.md)
-
-# C - More functions, more nested loops
-###### Training by Holberton School ([www.holbertonschool.com](www.holbertonschool.com))
-&nbsp;
 - [0. Write a function that checks for uppercase character.](0-isupper.c)
 - [1. Write a function that checks for a digit (0 through 9).](1-isdigit.c)
 - [2. Write a function that multiplies two integers.](2-mul.c)
