@@ -1,5 +1,5 @@
 # Holberton Low Level Programming (Language C)
-###### Training by Holberton School ([www.holbertonschool.com](www.holbertonschool.com))
+##### Holberton School ([www.holbertonschool.com](www.holbertonschool.com))
 &nbsp;
 - [C - Hello, World](hello_world/)
 - [C - Variables, if, else, while](variables_if_else_while/)
