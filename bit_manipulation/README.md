@@ -11,7 +11,7 @@ unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
 ```
 
-- 2\. Write a function that returns the value of a bit at a given index.
+- [2. Write a function that returns the value of a bit at a given index.](2-get_bit.c)
 ```c
 int get_bit(unsigned long int n, unsigned int index);
 ```
