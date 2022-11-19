@@ -1,8 +1,3 @@
-[Back to home](/README.md) - [Previous Project](/functions_nested_loops/README.md) - [Next Project](/makefiles/README.md)
-
-# C - Hello, World
-###### Training by Holberton School ([www.holbertonschool.com](www.holbertonschool.com))
-&nbsp;
 - [0. Write a script that runs a C file through the preprocessor and save the result into another file.](0-preprocessor)
 - [1. Write a script that compiles a C file but does not link.](1-compiler)
 - [2. Write a script that generates the assembly code of a C code and save it in an output file.](2-assembler)
