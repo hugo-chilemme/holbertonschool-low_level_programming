@@ -30,7 +30,7 @@ int _abs(int);
 int print_last_digit(int);
 ```
 - [8. Write a function that prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.](8-24_hours.c)
-```
+```c
 void jack_bauer(void);
 ```
 - [9. Write a function that prints the 9 times table, starting with 0.](9-times_table.c)
