@@ -9,9 +9,15 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file = open(filename, O_RDONLY);
-	char *str;
+	int file;
+	char *str; 
+	int Index = 0;
 
+	if (!filename)
+		return (0);
+
+	file = open(filename, O_RDONLY);
+	
 	if (file == -1)
 		return (0);
 
@@ -21,7 +27,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	str[letters] = '\0';
 
 	close(file);
-	printf("%s", str);
+
+	while (str[Index])
+		write(1, &str[Index++], 1);
 
 	return (strlen(str));
 }
