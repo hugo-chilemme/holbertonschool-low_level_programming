@@ -11,10 +11,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file;
 	char *str; 
+	int Index = 0;
 
 	if (!filename)
 		return (0);
-	printf("Error %s", filename);
+
 	file = open(filename, O_RDONLY);
 	
 	if (file == -1)
@@ -25,7 +26,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	read(file, str, letters);
 	str[letters] = '\0';
 
-	dprintf(STDOUT_FILENO, "%s", str);
+	while (str[Index])
+		write(STDOUT_FILENO, &str[Index++], 1);
 
 	close(file);
 	return (strlen(str));
