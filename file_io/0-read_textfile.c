@@ -26,10 +26,9 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	read(file, str, letters);
 	str[letters] = '\0';
 
-	close(file);
-
 	while (str[Index])
 		write(1, &str[Index++], 1);
 
+	close(file);
 	return (strlen(str));
 }
