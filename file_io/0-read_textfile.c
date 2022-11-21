@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (!filename)
 		return (0);
-
+	printf("Error %s", filename);
 	file = open(filename, O_RDONLY);
 	
 	if (file == -1)
@@ -25,7 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	read(file, str, letters);
 	str[letters] = '\0';
 
-	dprintf(STDERR_FILENO, "%s", str);
+	dprintf(STDOUT_FILENO, "%s", str);
 
 	close(file);
 	return (strlen(str));
