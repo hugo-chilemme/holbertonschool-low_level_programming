@@ -11,7 +11,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file;
 	char *str; 
-	int Index = 0;
 
 	if (!filename)
 		return (0);
@@ -26,8 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	read(file, str, letters);
 	str[letters] = '\0';
 
-	while (str[Index])
-		write(1, &str[Index++], 1);
+	dprintf(STDERR_FILENO, "%s", str);
 
 	close(file);
 	return (strlen(str));
