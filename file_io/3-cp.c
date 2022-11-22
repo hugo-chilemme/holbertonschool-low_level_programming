@@ -61,13 +61,13 @@ int main(int ac, char **av)
 	close_status = close(src);
 	if (close_status == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s", close_status);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i", close_status);
 		exit(100);	
 	}
 	close_status = close(dest);
 	if (close_status == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s", close_status);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i", close_status);
 		exit(100);
 	}
 	return (0);
