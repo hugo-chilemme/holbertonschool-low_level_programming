@@ -7,7 +7,7 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	int Index = 0;
+	int Index = 1;
 
 	if (!h)
 		return (0);
@@ -16,7 +16,7 @@ size_t print_dlistint(const dlistint_t *h)
 	{
 		Index += 1;
 		printf("%i\n", h->n);
-		h = h->next;
+		h = h->prev;
 	}
 
 	return (Index);
