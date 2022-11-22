@@ -50,5 +50,5 @@ int main(int ac, char **av)
 
 	close(src);
 	close(dest);
-	return (dest);
+	return (0);
 }
