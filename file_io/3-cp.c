@@ -8,14 +8,53 @@
 #include <unistd.h>
 
 /**
+ * close_status - function
+ * @fd: file constructor
+ * Return: Nothing.
+ */
+void close_status(int fd)
+{
+	int status = close(fd);
+
+	if (status == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i", status);
+		exit(100);
+	}
+}
+
+/**
+ * write_buffer - function
+ * @dest: @buffer dest
+ * @buffer: buffer to write in @dest 1024 bytes
+ * @size: size of @buffer
+ * @av: arguments in main
+ * Return: Nothing.
+ */
+void write_buffer(int dest, char buffer[1024], int size, char **av)
+{
+	if (size == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+		exit(98);
+	}
+
+	if (write(dest, buffer, size) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+		exit(99);
+	}
+}
+
+/**
  * main - check the code
- *
+ * @ac: number of element in **av
+ * @av: array
  * Return: Always 0.
  */
 int main(int ac, char **av)
 {
 	int src;
-	int close_status;
 	int dest;
 	char buffer[1024];
 	int size = 1;
@@ -45,30 +84,10 @@ int main(int ac, char **av)
 	while (size != 0)
 	{
 		size = read(src, buffer, 1024);
-		if (size == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-			exit(98);
-		}
-
-		if (write(dest, buffer, size) == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-			exit(99);
-		}
+		write_buffer(dest, buffer, size, av);
 	}
 
-	close_status = close(src);
-	if (close_status == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i", close_status);
-		exit(100);	
-	}
-	close_status = close(dest);
-	if (close_status == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i", close_status);
-		exit(100);
-	}
+	close_status(src);
+	close_status(dest);
 	return (0);
 }
