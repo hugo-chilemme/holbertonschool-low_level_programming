@@ -35,7 +35,7 @@
  int sum_dlistint(dlistint_t *head);
 ```
 
-- 7. Write a function that inserts a new node at a given position.[sert_dnodeint.c](sert_dnodeint.c) [2-add_dnodeint.c](2-add_dnodeint.c) [3-add_dnodeint_end.c](3-add_dnodeint_end.c) 
+- 7\. Write a function that inserts a new node at a given position. [sert_dnodeint.c](sert_dnodeint.c) [2-add_dnodeint.c](2-add_dnodeint.c) [3-add_dnodeint_end.c](3-add_dnodeint_end.c)
 ```c
  dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 ```
