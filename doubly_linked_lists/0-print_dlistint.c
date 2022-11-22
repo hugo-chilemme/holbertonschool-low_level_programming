@@ -7,15 +7,13 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	if (!h)
-		return (0);
+	int Index = 0;
 
-	if (h->n)
+	while (h)
 	{
 		printf("%i\n", h->n);
-		if (h->next)
-			return (1 + print_dlistint(h->next));
-		return (1);
+		h = h->next;
+		Index+=1;
 	}
-	return (0);
+	return (Index);
 }
