@@ -15,6 +15,7 @@
 int main(int ac, char **av)
 {
 	int src;
+	int close_status;
 	int dest;
 	char buffer[1024];
 	int size = 1;
@@ -57,8 +58,17 @@ int main(int ac, char **av)
 		}
 	}
 
-
-	close(src);
-	close(dest);
+	close_status = close(src);
+	if (close_status == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s", close_status);
+		exit(100);	
+	}
+	close_status = close(dest);
+	if (close_status == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s", close_status);
+		exit(100);
+	}
 	return (0);
 }
