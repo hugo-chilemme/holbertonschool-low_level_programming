@@ -44,7 +44,17 @@ int main(int ac, char **av)
 	while (size != 0)
 	{
 		size = read(src, buffer, 1024);
-		write(dest, buffer, size);
+		if (size == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
+			exit(98);
+		}
+
+		if (write(dest, buffer, size) == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
+			exit(99);
+		}
 	}
 
 
