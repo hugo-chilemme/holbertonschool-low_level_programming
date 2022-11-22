@@ -14,38 +14,38 @@
  */
 int main(int ac, char **av)
 {
-    	int src;
+	int src;
 	int dest;
-	char *buffer;
-	int size = 0;
+	char buffer[1024];
+	int size = 1;
 
 	if (ac != 3)
 	{
-		printf("Usage: cp file_from file_to\n");
+		dprintf(0, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
-	src = open(av[1], O_RDONLY | O_WRONLY, 0664);
+	src = open(av[1], O_RDONLY, 0664);
 
 	if (src == -1)
 	{
-		printf("Error: Can't read from file %s\n", av[1]);
+		dprintf(STDIN_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
-	
-	dest = open(av[2], O_CREAT | O_WRONLY | O_APPEND | O_TRUNC, 0600);
- 
+
+	dest = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+
 	if (dest == -1)
 	{
-		printf("Error: Can't write to %s", av[2]);
+		dprintf(STDIN_FILENO, "Error: Can't write to %s", av[2]);
 		exit(99);
 	}
 
 	while (size != 0)
 	{
-		size = read(src, &buffer, 1024);
-		write(dest, buffer, strlen(buffer));
-	}	
+		size = read(src, buffer, 1024);
+		write(dest, buffer, size);
+	}
 
 
 	close(src);
