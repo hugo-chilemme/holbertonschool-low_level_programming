@@ -4,14 +4,16 @@
 
 void free_dlistint(dlistint_t *head)
 {
-	if (!head)
-		return;
-
-	while (head->next)
+	
+	while (head)
 	{
-		printf("%i", head->n);
+		if (head->prev)
+			free(head->prev);
+
+		if (!head->next)
+			break;
+
 		head = head->next;
-		free(head->prev);
 	}
 	free(head);
 
