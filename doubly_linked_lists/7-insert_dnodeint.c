@@ -44,7 +44,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		checker = checker->next;
 		seek++;
 
-		if (!checker && seek == idx)
+		if (!checker && seek <= idx)
 		{
 			newNode->prev = lastNode;
 			lastNode->next = newNode;
