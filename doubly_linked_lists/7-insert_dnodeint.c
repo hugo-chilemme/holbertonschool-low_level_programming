@@ -43,7 +43,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		seek++;
 	}
 
-	if (index > seek)
+	if (idx > seek)
 	{
 		last->next = new;
 		return (new);
