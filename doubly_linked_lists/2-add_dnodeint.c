@@ -1,6 +1,12 @@
 #include "lists.h"
 
 
+/**
+ * add_dnodeint - Function
+ * @head: node element
+ * @n: new node value
+ * Return: New node
+ */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new = malloc(sizeof(dlistint_t));
